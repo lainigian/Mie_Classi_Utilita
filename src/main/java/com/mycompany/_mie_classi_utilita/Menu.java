@@ -18,6 +18,11 @@ public class Menu
     private String [] elencoVoci;
     private int numeroVoci;
     
+    /**
+     * Costruttore
+     * 
+     * @param elencoVoci Array di stringhe. Ogni stringa dell'array rappresenta una voce del menu
+     */
     public Menu(String[] elencoVoci)
     {
         //Copio le voci parametro nell'elenco voci attributo
@@ -36,6 +41,10 @@ public class Menu
         }
     }
     
+    public int getNumeroVoci()
+    {
+        return elencoVoci.length;
+    }
     
     public int sceltaMenu()
     {

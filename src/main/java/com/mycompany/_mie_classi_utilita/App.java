@@ -16,7 +16,7 @@ public class App {
 
     public static void main(String[] args) 
     {
-        String[] elencoVoci={
+        /*elencoVoci={
             "Esci",
             "Fai questo",
             "Fai quest'altro",
@@ -30,7 +30,8 @@ public class App {
             "Fai quest'altro",
             "Fai questo",
             "Fai quest'altro",
-        };
+        }; */
+        String[]  elencoVoci={""};
         Menu menu=new Menu(elencoVoci) ;  
         menu.visualizzaMenu();
         int scelta=menu.sceltaMenu();
