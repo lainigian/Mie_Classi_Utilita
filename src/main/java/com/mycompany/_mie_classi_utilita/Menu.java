@@ -4,7 +4,10 @@
  */
 package com.mycompany._mie_classi_utilita;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -33,23 +36,47 @@ public class Menu
         }
     }
     
+    
     public int sceltaMenu()
     {
         String sceltaStringa;
         boolean sceltaOk=true;
         int scelta=0;
-        Scanner tastiera=new Scanner(System.in);
+        ConsoleInput tastiera=new ConsoleInput();
        
         do
         {
             System.out.println("Scegli --> ");
-            sceltaOk=true;
-            sceltaStringa=tastiera.nextLine();
+            
+            try 
+            {
+                sceltaOk=false;
+                scelta=tastiera.readInt();
+                if (scelta<0 || scelta>=elencoVoci.length)
+                     {
+                         sceltaOk=false;
+                         System.out.println("Scelta non valida.");
+                     }
+                else
+                    sceltaOk=true;
+            } 
+            catch (IOException ex) 
+            {
+                System.out.println("Errore dispositivo di input");
+            } 
+            catch (NumberFormatException ex) 
+            {
+                System.out.println("Input non corretto");
+            }
+        }while(!sceltaOk);
+        
+            /*
                 if (sceltaStringa.charAt(0)<'0' || sceltaStringa.charAt(0)>'9')
                 {
                     System.out.println("Input non corretto. Inserire un numero!");
                     sceltaOk=false;
-                }                    
+                }             
+
                 else  //scelta è un numero
                 {  
                      scelta=Integer.parseInt(""+sceltaStringa.charAt(0));
@@ -59,7 +86,7 @@ public class Menu
                          System.out.println("Scelta non valida.");
                      }        
                 }
-        }while(!sceltaOk);
+        */
         
         return scelta;     
     }
