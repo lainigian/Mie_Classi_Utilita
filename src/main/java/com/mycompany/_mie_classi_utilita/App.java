@@ -50,7 +50,13 @@ public class App {
        }
       */
       
-      Ordinatore.selectionSortCrescente(arrayInteri);
+       String[] attuale3={"cane", "ciao lao","", "cane", "casa","zorro", "Pinna","zorro", "baffo", "pinna", "ciao lao", "Pinna"};
+      attuale3=Ordinatore.bubbleSortCrescente(attuale3);
+     for(int i=0;i<attuale3.length;i++)
+     {
+         System.out.println(attuale3[i]+"\n");
+     }
+        
       
     }
 }

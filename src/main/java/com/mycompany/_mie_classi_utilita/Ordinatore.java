@@ -23,6 +23,8 @@ public class Ordinatore
             int s;
             if (array==null)
                 return;
+            if(pos1<0 || pos2<0 ||pos1>=array.length || pos2>=array.length)
+                return;
             if (array.length!=0)
             {
                 s=array[pos1];
@@ -40,7 +42,9 @@ public class Ordinatore
         public static void scambia (String[] array, int pos1, int pos2)
         {
             String s;
-             if (array==null)
+            if (array==null)
+                return;
+            if(pos1<0 || pos2<0 ||pos1>=array.length || pos2>=array.length)
                 return;
             if (array.length!=0)
             {
@@ -48,6 +52,9 @@ public class Ordinatore
                 array[pos1]=array[pos2];
                 array[pos2]=s;
             }
+            
+            
+            
         }
 
         /**
@@ -255,7 +262,7 @@ public class Ordinatore
                 
                 for(int i=0;i<N-1;i++)
                 {
-                    if (ordinato[i].compareTo(ordinato[i+1])>0)
+                    if (ordinato[i].compareToIgnoreCase(ordinato[i+1])>0)
                     {
                         scambia(ordinato, i, i+1);
                         scambioAvvenuto=true;
@@ -290,7 +297,7 @@ public class Ordinatore
                 
                 for(int i=0;i<N-1;i++)
                 {
-                    if (ordinato[i].compareTo(ordinato[i+1])<0)
+                    if (ordinato[i].compareToIgnoreCase(ordinato[i+1])<0)
                     {
                         scambia(ordinato, i, i+1);
                         scambioAvvenuto=true;
