@@ -21,9 +21,14 @@ public class Ordinatore
         public static void scambia (int[] array, int pos1, int pos2)
         {
             int s;
-            s=array[pos1];
-            array[pos1]=array[pos2];
-            array[pos2]=s;
+            if (array==null)
+                return;
+            if (array.length!=0)
+            {
+                s=array[pos1];
+                array[pos1]=array[pos2];
+                array[pos2]=s;
+            }
         }
         
         /**
@@ -35,16 +40,16 @@ public class Ordinatore
         public static void scambia (String[] array, int pos1, int pos2)
         {
             String s;
-            s=array[pos1];
-            array[pos1]=array[pos2];
-            array[pos2]=s;
+             if (array==null)
+                return;
+            if (array.length!=0)
+            {
+                s=array[pos1];
+                array[pos1]=array[pos2];
+                array[pos2]=s;
+            }
         }
-        
-        
-        
-       
-        
-        
+
         /**
          * Ordinamento crescente con selection sort di un array di interi
          * @param a
@@ -52,6 +57,8 @@ public class Ordinatore
          */
         public static int[] selectionSortCrescente(int[] a)
         {
+            if (a==null)
+                return null;
             int N=a.length;
             int[] ordinato=new int[N];
             //copio i valori di a nel nuovo vettore
@@ -78,6 +85,8 @@ public class Ordinatore
          */
         public static int[] selectionSortDecrescente(int[] a)
         {
+            if (a==null)
+                return null;
             int N=a.length;
             int[] ordinato=new int[N];
             //copio i valori di a nel nuovo vettore
@@ -104,6 +113,8 @@ public class Ordinatore
          */
         public static String[] selectionSortCrescente(String[] a)
         {
+            if (a==null)
+                return null;
             int N=a.length;
             String[] ordinato=new String[N];
             //copio i valori di a nel nuovo vettore
@@ -130,6 +141,8 @@ public class Ordinatore
          */
         public static String[] selectionSortDecrescente(String[] a)
         {
+            if (a==null)
+                return null;
             int N=a.length;
             String[] ordinato=new String[N];
             //copio i valori di a nel nuovo vettore
@@ -157,7 +170,8 @@ public class Ordinatore
          */
         public static int[] bubbleSortCrescente(int[] a)
         {
-            
+            if (a==null)
+                return null;
             boolean scambioAvvenuto;
             int N=a.length;
             int[] ordinato=new int[N];
@@ -190,7 +204,8 @@ public class Ordinatore
          */
         public static int[] bubbleSortDecrescente(int[] a)
         {
-            
+            if (a==null)
+                return null;
             boolean scambioAvvenuto;
             int N=a.length;
             int[] ordinato=new int[N];
@@ -223,7 +238,8 @@ public class Ordinatore
          */
         public static String[] bubbleSortCrescente(String[] a)
         {
-            
+            if (a==null)
+                return null;
             boolean scambioAvvenuto;
             int N=a.length;
             String[] ordinato=new String[N];
@@ -257,7 +273,8 @@ public class Ordinatore
          */
         public static String[] bubbleSortDecrescente(String[] a)
         {
-            
+            if (a==null)
+                return null;
             boolean scambioAvvenuto;
             int N=a.length;
             String[] ordinato=new String[N];

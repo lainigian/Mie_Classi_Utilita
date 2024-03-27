@@ -16,27 +16,41 @@ public class App {
 
     public static void main(String[] args) 
     {
-        /*elencoVoci={
-            "Esci",
-            "Fai questo",
-            "Fai quest'altro",
-            "Fai questo",
-            "Fai quest'altro",
-            "Fai questo",
-            "Fai quest'altro",
-            "Fai questo",
-            "Fai quest'altro",
-            "Fai questo",
-            "Fai quest'altro",
-            "Fai questo",
-            "Fai quest'altro",
-        }; */
-        String[]  elencoVoci={""};
-        Menu menu=new Menu(elencoVoci) ;  
-        menu.visualizzaMenu();
-        int scelta=menu.sceltaMenu();
-        System.out.println("Scelta= "+scelta);
-        
+       int[] arrayInteri={};
+       String[] arrayStringhe={};
+       int [] risultato;
+       
+       Ordinatore.scambia(arrayInteri, 0, 1);
+       System.out.println("Array:");
+       for (int i=0;i<arrayInteri.length;i++)
+       {
+           System.out.println(arrayInteri[i]+"\n");
+       }
+         Ordinatore.scambia(arrayStringhe, 0, 1);
+        System.out.println("Array stringhe:");
+       for (int i=0;i<arrayStringhe.length;i++)
+       {
+           System.out.println(arrayStringhe[i]+"\n");
+       }
+       
+       arrayInteri=null;
+       arrayStringhe=null;
+       
+       Ordinatore.scambia(arrayInteri, 0, 1);
+       System.out.println("Array:");
+      /* for (int i=0;i<arrayInteri.length;i++)
+       {
+           System.out.println(arrayInteri[i]+"\n");
+       }
+      */Ordinatore.scambia(arrayStringhe, 0, 1);
+        System.out.println("Array stringhe:");
+      /*for (int i=0;i<arrayStringhe.length;i++)
+       {
+           System.out.println(arrayStringhe[i]+"\n");
+       }
+      */
+      
+      Ordinatore.selectionSortCrescente(arrayInteri);
       
     }
 }

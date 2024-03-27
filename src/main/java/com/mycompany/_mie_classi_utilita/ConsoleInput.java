@@ -32,7 +32,8 @@ public class ConsoleInput
      */
     public int readInt() throws IOException,NumberFormatException
     {
-        return (Integer.parseInt(reader.readLine()));
+        String s=reader.readLine();
+        return (Integer.parseInt(s));
     }
     
      /**
